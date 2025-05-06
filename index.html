@@ -11,12 +11,20 @@
   <h1>Demostración de vídeo HTML5</h1>
   <p>Este vídeo está codificado en tres formatos distintos para asegurar compatibilidad con todos los navegadores:</p>
 
-  <video controls poster="img/poster.jpg">
-    <source src="videos/clip_html5.mp4" type="video/mp4">
-    <source src="videos/clip_html5.webm" type="video/webm">
-    <source src="videos/clip_html5.ogv" type="video/ogg">
-    Tu navegador no soporta la etiqueta de vídeo HTML5.
-  </video>
+  <video 
+  controls 
+  autoplay 
+  muted 
+  loop 
+  preload="auto" 
+  poster="img/poster.jpg"
+>
+  <source src="videos/clip_html5.mp4" type="video/mp4">
+  <source src="videos/clip_html5.webm" type="video/webm">
+  <source src="videos/clip_html5.ogv" type="video/ogg">
+  Tu navegador no soporta la etiqueta de vídeo HTML5.
+</video>
+
 
   <p><strong>Formatos incluidos:</strong> MP4 (H.264 + AAC), WebM (VP8 + Vorbis), Ogg (Theora + Vorbis)</p>
 
