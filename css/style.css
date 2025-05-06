@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2em;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h1 {
+  color: #005f73;
+}
+video {
+  width: 100%;
+  max-width: 720px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+p {
+  max-width: 720px;
+}
