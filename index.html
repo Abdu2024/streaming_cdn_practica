@@ -8,26 +8,100 @@
 </head>
 <body>
 
-  <h1>Demostración de vídeo HTML5</h1>
-  <p>Este vídeo está codificado en tres formatos distintos para asegurar compatibilidad con todos los navegadores:</p>
+  <h1>PPD Práctica: Demostración de vídeo HTML5</h1>
+  <hr>
+  
+  
+  <div class="stats-container stats-top">
+    <button id="toggleStats" class="stats-toggle">Mostrar Estadísticas</button>
+    <div id="videoStats" class="video-stats">
+     
+      <h3>Estadísticas del Vídeo</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-label">Resolución:</span>
+          <span id="resolution" class="stat-value">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Formato actual:</span>
+          <span id="currentFormat" class="stat-value">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Tiempo reproducido:</span>
+          <span id="playbackTime" class="stat-value">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Velocidad de reproducción:</span>
+          <span id="playbackRate" class="stat-value">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Volumen:</span>
+          <span id="volume" class="stat-value">-</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Tamaño del buffer:</span>
+          <span id="bufferSize" class="stat-value">-</span>
+        </div>
+      </div>
+      
+      <h3>Estadísticas de Distribución CDN</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-label">Latencia Media:</span>
+          <span id="latency" class="stat-value">0 ms</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Cambios de Calidad:</span>
+          <span id="qualityChanges" class="stat-value">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Tiempo de Buffering:</span>
+          <span id="bufferingTime" class="stat-value">0 ms</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Ancho de Banda Promedio:</span>
+          <span id="bandwidth" class="stat-value">0 Mbps</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Pico de Espectadores:</span>
+          <span id="viewers" class="stat-value">1</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Rendimiento CDN:</span>
+          <span id="cdnPerformance" class="stat-value">100%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="description">
+    <p>Este vídeo está codificado en tres formatos distintos para asegurar compatibilidad con todos los navegadores:</p>
+  </div>
+  <picture id="videoPoster" style="display:none;">
+    <source srcset="img/poster.webp" type="image/webp">
+    <img src="img/poster.jpg" alt="Video Poster">
+  </picture>
 
-  <video 
-  controls 
-  autoplay 
-  muted 
-  loop 
-  preload="auto" 
-  poster="img/poster.jpg"
->
-  <source src="videos/clip_html5.mp4" type="video/mp4">
-  <source src="videos/clip_html5.webm" type="video/webm">
-  <source src="videos/clip_html5.ogv" type="video/ogg">
-  Tu navegador no soporta la etiqueta de vídeo HTML5.
-</video>
-
-
-  <p><strong>Formatos incluidos:</strong> MP4 (H.264 + AAC), WebM (VP8 + Vorbis), Ogg (Theora + Vorbis)</p>
-
+  <div class="video-container">
+    <video 
+      id="myVideo"
+      controls 
+      autoplay 
+      muted 
+      loop 
+      preload="auto" 
+      poster="img/poster.jpg"
+      data-poster-webp="img/poster.webp"
+    >
+      <source src="videos/clip_html5.mp4" type="video/mp4">
+      <source src="videos/clip_html5.webm" type="video/webm">
+      <source src="videos/clip_html5.ogv" type="video/ogg">
+      Tu navegador no soporta la etiqueta de vídeo HTML5.
+    </video>
+  </div>
+  <div class="format-info">
+    <p><strong>Formatos incluidos:</strong> MP4 (H.264 + AAC), WebM (VP8 + Vorbis), Ogg (Theora + Vorbis)</p>
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>
