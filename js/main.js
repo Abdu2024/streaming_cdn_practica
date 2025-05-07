@@ -67,9 +67,6 @@ window.addEventListener('DOMContentLoaded', () => {
       const latencyElement = document.getElementById('latency');
       const qualityChangesElement = document.getElementById('qualityChanges');
       const bufferingTimeElement = document.getElementById('bufferingTime');
-      const bandwidthElement = document.getElementById('bandwidth');
-      const viewersElement = document.getElementById('viewers');
-      const cdnPerformanceElement = document.getElementById('cdnPerformance');
       
       // Resolución
       if (resolutionElement) {
@@ -143,23 +140,6 @@ window.addEventListener('DOMContentLoaded', () => {
       if (bufferingTimeElement) {
         // Convert to milliseconds for display since totalBufferingTime is in seconds
         bufferingTimeElement.textContent = `${Math.round(totalBufferingTime * 1000)} ms`;
-      }
-      
-      // Ancho de banda (estimado)
-      if (bandwidthElement) {
-        // Estimación simple basada en el tamaño del buffer
-        const estimatedBandwidth = video.readyState > 2 ? Math.random() * 5 : 0;
-        bandwidthElement.textContent = `${estimatedBandwidth.toFixed(1)} Mbps`;
-      }
-      
-      // Espectadores (simulado)
-      if (viewersElement) {
-        viewersElement.textContent = '1';
-      }
-      
-      // Rendimiento CDN (simulado)
-      if (cdnPerformanceElement) {
-        cdnPerformanceElement.textContent = '100%';
       }
     }
   }
